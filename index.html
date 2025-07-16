@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="contactBook" class="contactbook-container"> Contact Loading </div>
+    
+    
+      
+        <button id="refresh" type="submit">Refresh</button>
+        <button id="addBtn" type="button">Add Contact</button>
+     
+    
+  
+ 
+
+
+
+
+    <script src="app.js"></script>
+
+    <script>
+        function displayOutput(data){
+  let output = "<table>"
+   for(a in data){
+   output += `
+             <tr>
+                 <td>
+                   <img src="${rootPath}controller/uploads/${data[a].avatar}" alt="avatar"> width= "40"</img>
+                 </td>
+                 <td>
+                  <h4>${data[a].firstname}
+                 </h4>
+                 </td>
+                 <td>
+                  <h4>
+                     ${data[a].lastname}
+                  </h4>
+                  </td>
+             </tr>` 
+
+   }
+
+   output +="</table>";
+   document.getElementById("contactBook").innerHTML = output
+}
+
+
+
+
+    </script>
+</body>
+</html>
